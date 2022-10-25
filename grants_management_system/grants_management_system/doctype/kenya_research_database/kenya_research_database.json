@@ -1,0 +1,217 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:project_title",
+ "creation": "2022-06-25 11:32:06.344341",
+ "description": "Kenya Research Database",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project_title",
+  "principal_investigator_name",
+  "gender",
+  "grant_name",
+  "category",
+  "programme",
+  "column_break_5",
+  "funding_agency",
+  "funding_agency_type",
+  "grant_amount",
+  "lead_pi_affiliate_institution",
+  "column_break_9",
+  "project_site",
+  "discipline",
+  "start_date",
+  "end_date",
+  "address_and_contact_section",
+  "knrd_pi_address_and_contact",
+  "other_co_investigators_in_the_project_section",
+  "project_co_investigators",
+  "project_achievements_section",
+  "project_achievements",
+  "abstract_section",
+  "abstract"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "principal_investigator_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Principal Investigator Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grant_name",
+   "fieldtype": "Data",
+   "label": "Grant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Category",
+   "options": "\nNational\nBilateral\nMultilateral"
+  },
+  {
+   "fieldname": "programme",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Programme",
+   "options": "Grant Programme"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "funding_agency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Funding Agency",
+   "options": "Donor"
+  },
+  {
+   "fetch_from": "funding_agency.donor_type",
+   "fieldname": "funding_agency_type",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Funding Agency Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grant_amount",
+   "fieldtype": "Currency",
+   "label": "Grant Amount [in KES]"
+  },
+  {
+   "fieldname": "lead_pi_affiliate_institution",
+   "fieldtype": "Data",
+   "label": "Lead PI Affiliate Institution"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_site",
+   "fieldtype": "Data",
+   "label": "Project Site"
+  },
+  {
+   "fieldname": "discipline",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Discipline",
+   "options": "Grant Discipline"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "address_and_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact",
+   "options": "fa fa-map-marker"
+  },
+  {
+   "fieldname": "knrd_pi_address_and_contact",
+   "fieldtype": "Table",
+   "label": "Principal Investigator Address and Contact",
+   "options": "KNRD PI Address and Contact"
+  },
+  {
+   "fieldname": "other_co_investigators_in_the_project_section",
+   "fieldtype": "Section Break",
+   "label": "Other Co Investigators in the project"
+  },
+  {
+   "fieldname": "project_co_investigators",
+   "fieldtype": "Table",
+   "label": "Project Co Investigators",
+   "options": "KRD Project Co Investigators"
+  },
+  {
+   "fieldname": "project_achievements_section",
+   "fieldtype": "Section Break",
+   "label": "Project Achievements"
+  },
+  {
+   "fieldname": "project_achievements",
+   "fieldtype": "Table",
+   "label": "Project Achievements",
+   "options": "Kenya Research Database Project Achievement"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "abstract_section",
+   "fieldtype": "Section Break",
+   "label": "Abstract"
+  },
+  {
+   "fieldname": "abstract",
+   "fieldtype": "Text Editor",
+   "label": "Abstract"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-10-15 23:10:33.716324",
+ "modified_by": "Administrator",
+ "module": "Grants Management System",
+ "name": "Kenya Research Database",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

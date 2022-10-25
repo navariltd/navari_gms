@@ -1,0 +1,303 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-03-22 17:37:14.124008",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_2",
+  "posting_date",
+  "company",
+  "grant_review_assignment_filters_section",
+  "grant_call",
+  "grant_call_name",
+  "type",
+  "column_break_222_column",
+  "discipline",
+  "programme",
+  "gender",
+  "column_break_9",
+  "from_date",
+  "to_date",
+  "actions_section",
+  "get_grant_applications",
+  "column_break_18",
+  "get_reviewers",
+  "column_break_20",
+  "send_emails_to_reviewers",
+  "grant_applications_section",
+  "grant_applications",
+  "reviewers_section_section",
+  "reviewers",
+  "email_details_section_section",
+  "subject",
+  "email_template",
+  "message",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "GRNT-REVW-ASGN-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "grant_review_assignment_filters_section",
+   "fieldtype": "Section Break",
+   "label": "Grant Review Assignment Filters"
+  },
+  {
+   "fieldname": "grant_call",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Grant Call",
+   "options": "Grant Call",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grant_call.grant_call_name",
+   "fieldname": "grant_call_name",
+   "fieldtype": "Read Only",
+   "label": "Grant Call Name"
+  },
+  {
+   "fetch_from": "grant_call.type",
+   "fetch_if_empty": 1,
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "\nGrant Application\nUpscaling",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_222_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "grant_call.discipline",
+   "fetch_if_empty": 1,
+   "fieldname": "discipline",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Discipline",
+   "options": "Grant Discipline",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grant_call.programme",
+   "fetch_if_empty": 1,
+   "fieldname": "programme",
+   "fieldtype": "Link",
+   "label": "Programme",
+   "options": "Grant Programme",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "grant_call.opening_date",
+   "fetch_if_empty": 1,
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "grant_call.closing_date",
+   "fetch_if_empty": 1,
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actions_section",
+   "fieldtype": "Section Break",
+   "label": "Actions"
+  },
+  {
+   "fieldname": "get_grant_applications",
+   "fieldtype": "Button",
+   "label": "Get Grant Applications"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "get_reviewers",
+   "fieldtype": "Button",
+   "label": "Get Reviewers"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "send_emails_to_reviewers",
+   "fieldtype": "Button",
+   "label": "Send Emails to Reviewers"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "grant_applications_section",
+   "fieldtype": "Section Break",
+   "label": "Grant Applications"
+  },
+  {
+   "fieldname": "grant_applications",
+   "fieldtype": "Table",
+   "label": "Applications",
+   "options": "Grant Review Assignment Application",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reviewers_section_section",
+   "fieldtype": "Section Break",
+   "label": "Reviewers"
+  },
+  {
+   "fieldname": "reviewers",
+   "fieldtype": "Table",
+   "label": "Reviewers",
+   "options": "Grant Review Assignment Reviewer",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "email_details_section_section",
+   "fieldtype": "Section Break",
+   "label": "Email Details"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "email_template",
+   "fieldtype": "Link",
+   "label": "Email Template",
+   "options": "Email Template"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text Editor",
+   "label": "Message"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grant Review Assignment",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Reviews",
+   "link_doctype": "Grant Application Review",
+   "link_fieldname": "grant_review_assignment"
+  }
+ ],
+ "modified": "2022-10-25 22:56:18.022384",
+ "modified_by": "Administrator",
+ "module": "Grants Management System",
+ "name": "Grant Review Assignment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Portal User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Non Profit",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "timeline_field": "discipline",
+ "track_changes": 1
+}
