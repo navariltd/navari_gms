@@ -192,7 +192,7 @@
    "link_fieldname": "grant_disbursement_entry"
   }
  ],
- "modified": "2022-10-25 22:42:24.409253",
+ "modified": "2022-10-25 23:46:58.038683",
  "modified_by": "Administrator",
  "module": "Grants Management System",
  "name": "Grant Disbursement Entry",
@@ -236,7 +236,6 @@
    "write": 1
   }
  ],
- "restrict_to_domain": "Non Profit",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
