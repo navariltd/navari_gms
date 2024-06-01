@@ -1,11 +1,12 @@
 from . import __version__ as app_version
 
 app_name = "grants_management_system"
-app_title = "Grants Management System"
+app_title = "Navari Grants Management System"
 app_publisher = "Navari Limited"
-app_description = "A non profit app for grants management"
+app_description = "A Custom Non Profit App for Grants Management"
 app_email = "info@navari.co.ke"
 app_license = "GNU General Public License (v3)"
+required_apps = ["frappe/erpnext"]
 
 # Includes in <head>
 # ------------------
